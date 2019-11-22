@@ -11,15 +11,24 @@ namespace People
     {
         string dbPath => FileAccessHelper.GetLocalFilePath("people.db3");
 
+        public static object PersonRepo { get; internal set; }
+
         public App()
         {
             InitializeComponent();
 
             MainPage = new People.MainPage()
             {
-                Text = dbPath,
+                
             };
+
+           
         }
+      
+
+
+
+
 
         protected override void OnStart()
         {
